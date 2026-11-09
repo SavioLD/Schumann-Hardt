@@ -15,7 +15,8 @@ FAQ · Footer.
 ## Inhalt
 
 - `index.html` – die komplette Seite (self-contained, kein Build-Schritt nötig)
-- `bilder/` – Bildmaterial (siehe `bilder/HIER-BILDER-ABLEGEN.txt`)
+- `bilder/` – Bildmaterial (Originale + Web-Versionen, siehe „Bildmaterial“)
+- `creatives/` – Meta-Ads-Creatives, Facebook-Bilder, Werbetexte, Generator
 - `.nojekyll` – sorgt dafür, dass GitHub Pages die Dateien 1:1 ausliefert
 
 ## Live schalten (GitHub Pages)
@@ -23,32 +24,49 @@ FAQ · Footer.
 1. Repo-Settings → **Pages** → Source: **Deploy from a branch**, Branch: `main` / `/ (root)`
 2. Nach ein paar Minuten unter `https://saviold.github.io/Schumann-Hardt/` erreichbar
 
-## CI – aktuell VORLÄUFIG
+## CI
 
-Die Firmenwebsite (`schumann-kies.de`) war beim Bau nicht erreichbar –
-weder live noch über das Webarchiv. Farben, Schrift und Logo konnten
-deshalb noch **nicht** übernommen werden. Gesetzt ist ein vorläufiges,
-branchentypisches CI (Tiefblau für Wasser/Nassauskiesung + Sand-/Kieston
-als Akzent, Schrift Barlow).
+Farben direkt aus dem **Original-Logo** ausgelesen
+(`bilder/Logo s+h-1794221523.png`):
 
-Sobald das Original-Logo in `bilder/` liegt, werden die Farben direkt aus
-dem Logo ausgelesen. Alle Farben und Schriften stecken **ausschließlich**
-im `:root`-Block ganz oben in `index.html` – dort einmal ändern, die ganze
-Seite zieht nach:
+| Farbe | Wert | Einsatz |
+|-------|------|---------|
+| Logo-Magenta | `#b20058` | Buttons, Akzente, Kicker (6,9:1 auf Weiß, weiße Schrift darauf 6,9:1) |
+| Logo-Grau | `#817f84` | Basis für das Anthrazit `#26252a` (Hero, Mid-CTA, Footer) |
+| Magenta hell | `#f4a6c8` | Akzent-Text auf Anthrazit (Magenta selbst wäre dort zu kontrastarm) |
 
-```css
---brand:#e3a72f;       --brand-rgb:227,167,47;   /* Akzent: Buttons, Marker */
---brand-dark:#c98f1d;  /* Hover                                          */
---brand-700:#8a5c0c;   /* Akzent als Text auf Weiß                        */
---brand-900:#0f2b46;   --brand-900-rgb:15,43,70; /* Topbar, Hero, Footer  */
---brand-soft:#fbf1dc;  /* helle Flächen                                   */
---on-brand:#0f2b46;    /* Textfarbe AUF dem Akzent (Kontrast!)            */
---f-display / --f-body: Barlow
-```
+Die Topbar ist wie im ALWA-Original **hell** – das Logo ist für helle
+Flächen gestaltet. Alle Farben und Schriften stecken **ausschließlich** im
+`:root`-Block ganz oben in `index.html`.
 
-Das Logo wird automatisch eingesetzt, sobald eine Datei unter einem der
-Namen in `LOGO_CANDIDATES` (im `<script>`) liegt – bis dahin steht der
-Schriftzug „SCHUMANN & HARDT“.
+**Schrift:** Barlow. Die Firmenwebsite (`schumann-kies.de`) war beim Bau
+nicht erreichbar, die Website-Schrift konnte deshalb nicht übernommen
+werden. Barlow passt zur kräftigen, kursiven Logo-Form und ist gut lesbar.
+Liegt ein Styleguide vor, ist das eine Zeile (`--f-display` / `--f-body`).
+
+## Bildmaterial
+
+Alle Originale liegen **unverändert** in `bilder/`. Daneben liegen davon
+abgeleitete Web-Dateien:
+
+| Datei | Herkunft | verwendet für |
+|-------|----------|---------------|
+| `Logo s+h-1794221523.png` | Original-Logo (5120 × 4204) | Quelle |
+| `logo.png` | Original, transparenter Rand entfernt, auf 474 × 360 verkleinert | Topbar, Hero, Footer |
+| `logo-hd.png` | Original, transparenter Rand entfernt, 2000 × 1520 | Creatives, Facebook |
+| `Schwimmgreifer-1794221524.jpg` | Original | Creatives, Facebook-Titelbild |
+| `hero.jpg` | Schwimmgreifer, web-optimiert (2200 px) | Hero allgemein + Geräteführer |
+| `Neubau Aufbereitung-1794221524.jpg` | Original | Creatives |
+| `hero-mechatroniker.jpg` | Neubau Aufbereitung, web-optimiert (2200 px) | Hero Mechatroniker |
+| `SchwimmbÃ¤nder-1794221524.jpg` | Original (Umlaut beim Upload verunstaltet) | Creatives |
+
+Das Logo wird nur verkleinert und um den leeren Rand gekürzt – nicht
+nachgebaut, nicht eingefärbt, Seitenverhältnis unverändert.
+
+Auf dem Desktop beginnt das Hero-Foto erst hinter der Textspalte und läuft
+weich ins Anthrazit aus – so steht der Text nie auf hellem Foto und das
+Motiv bleibt sichtbar. Den Bildausschnitt je Foto steuert `HERO_IMG[…].pos`
+im Skript.
 
 ## Stellen pflegen
 
@@ -216,8 +234,8 @@ Die beiden Testeinträge können in der Lead Table gelöscht werden.
 
 ## Noch zu prüfen
 
-- **CI** (siehe oben) – wird nach dem Logo-Upload aus dem Original-Logo
-  übernommen.
+- **Schrift** (siehe „CI“) – Barlow gesetzt, weil die Website-Schrift
+  nicht auslesbar war.
 - **Links zu Impressum und Datenschutz** – aktuell
   `schumann-kies.de/impressum.html` und `/datenschutz.html`
   (abgeleitet aus `schumann-kies.de/jobs.html`, wegen der nicht
@@ -233,3 +251,45 @@ Die beiden Testeinträge können in der Lead Table gelöscht werden.
 - Eine E-Mail-Benachrichtigung bei neuer Bewerbung (wie bei ALWA über
   Web3Forms) ist **nicht** eingebaut – dafür bräuchte es einen eigenen
   Access Key mit dem richtigen Empfänger.
+
+## Creatives (Meta Ads) + Facebook-Seite
+
+Alles in `creatives/`. Gerendert wird mit **einem** Befehl:
+
+```bash
+node creatives/build.mjs
+```
+
+Das Skript baut jede Datei aus HTML/CSS im CI der Karriereseite – gleiche
+Farben, gleiche Schrift (Barlow liegt als woff2 in `creatives/fonts/`,
+damit offline identisch gerendert wird). Verwendet wird ausschließlich das
+hochgeladene Bildmaterial aus `bilder/`.
+
+**12 Creatives** – 2 Stellen × 3 Motive × 2 Formate:
+
+| Motiv | Ansatz | Foto Mechatroniker | Foto Geräteführer | CTA |
+|-------|--------|--------------------|-------------------|-----|
+| `stelle` | Stelle direkt ansprechen, Hürde im Text | Neubau Aufbereitung | Schwimmgreifer | In 60 Sekunden bewerben |
+| `check` | Qualifizierer – listet die K.-o.-Kriterien | Schwimmbänder | Schwimmbänder | Dann sollten wir reden |
+| `benefit` | Problem → Lösung: „Sand und Kies werden immer gebraucht. Du auch.“ | Schwimmgreifer | Neubau Aufbereitung | Jetzt bewerben |
+
+Formate: `4x5` (1080 × 1350) und `9x16` (1080 × 1920). Bei 9:16 bleiben
+oben 250 px und unten 340 px frei von Text und Logo (Safe Zones für
+Stories/Reels).
+
+Ausgelegt auf **Qualität statt Masse**: Jedes Motiv nennt die Hürde der
+Stelle (abgeschlossene Ausbildung bzw. sicherer Umgang mit Großgeräten),
+das `check`-Motiv listet die Pflichtkriterien als Checkliste.
+
+Dateinamen: `<stelle>-<motiv>-<format>.png`, z. B.
+`creatives/mechatroniker-stelle-4x5.png`.
+
+**Facebook-Seite**
+
+| Datei | Format | Aufbau |
+|-------|--------|--------|
+| `creatives/facebook-profilbild.png` | 1080 × 1080 | Original-Logo mittig auf Weiß, 740 px breit – auch die Ecken der Logo-Fläche liegen sicher im runden Ausschnitt |
+| `creatives/facebook-titelbild.png` | 1640 × 856 | Logo + Claim „Sicherer Arbeitsplatz mit Zukunft.“ + Stellen in der Sicherheitszone 1092 × 616; unten rechts kein Text (Button-Bereich) |
+
+**Werbetexte:** `creatives/werbetexte.md` – drei Varianten, jede mit jedem
+Creative kombinierbar.

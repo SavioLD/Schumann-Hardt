@@ -7,7 +7,7 @@
 <title>Karriere bei Schumann &amp; Hardt · Mechatroniker &amp; Geräteführer (m/w/d) in Babenhausen</title>
 <meta name="description" content="Schumann &amp; Hardt GmbH &amp; Co. KG sucht Mechatroniker und Geräteführer (m/w/d) für das Kieswerk am Haselsee in Babenhausen-Harreshausen. Sicherer, zukunftsorientierter Arbeitsplatz in Vollzeit. Jetzt in unter 60 Sekunden bewerben – ohne Lebenslauf." />
 <meta name="robots" content="index, follow, max-image-preview:large" />
-<meta name="theme-color" content="#0f2b46" />
+<meta name="theme-color" content="#b20058" />
 <meta name="geo.region" content="DE-HE" />
 <meta name="geo.placename" content="Babenhausen" />
 
@@ -19,6 +19,7 @@
 <meta property="og:title" content="Karriere bei Schumann &amp; Hardt – Mechatroniker &amp; Geräteführer (m/w/d)" />
 <meta property="og:description" content="Zwei Stellen im Kieswerk am Haselsee, Babenhausen-Harreshausen. Sicherer, zukunftsorientierter Arbeitsplatz in Vollzeit. Jetzt bewerben – ohne Anschreiben, ohne Lebenslauf." />
 <meta property="og:url" content="https://saviold.github.io/Schumann-Hardt/" />
+<meta property="og:image" content="https://saviold.github.io/Schumann-Hardt/bilder/hero.jpg" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,33 +34,34 @@
    :root-Block. Wer das CI anpassen will, ändert nur hier – der Rest der
    Seite zieht automatisch nach.
 
-   VORLÄUFIG: Die Firmenwebsite (schumann-kies.de) war beim Bau nicht
-   erreichbar. Sobald das Original-Logo im Repo liegt, werden die Farben
-   direkt aus dem Logo ausgelesen und hier eingetragen.
+   Farben direkt aus dem Original-Logo ausgelesen
+   (bilder/Logo s+h-1794221523.png): Magenta #b20058, Grau #817f84.
+   Die dunklen Flächen sind ein Anthrazit aus dem Logo-Grau.
    ===================================================================== */
 :root{
   --bg:#ffffff;
-  --bg-soft:#f6f4ef;
-  --panel-2:#ebe6da;
-  --line:rgba(15,43,70,.12);
-  --line-strong:rgba(15,43,70,.24);
-  --ink:#13263a;
-  --ink-soft:#43566a;
-  --ink-mute:#77869a;
-  --brand:#e3a72f;             /* Kies-/Sandton – Buttons, Akzente     */
-  --brand-dark:#c98f1d;        /* Hover-Zustand                        */
-  --brand-rgb:227,167,47;      /* dieselbe Farbe für Schatten/Fokus    */
-  --brand-700:#8a5c0c;         /* dunkler Sandton, auf Weiß lesbar     */
-  --brand-900:#0f2b46;         /* Tiefblau – Topbar, Hero, Footer      */
-  --brand-900-rgb:15,43,70;
-  --brand-soft:#fbf1dc;        /* heller Sandton für Flächen           */
-  --on-brand:#0f2b46;          /* Textfarbe AUF dem Sandton (Kontrast) */
-  --on-dark-accent:#f5d48f;    /* Akzent-Text auf Tiefblau             */
-  --grad:linear-gradient(125deg,#0a1f33 0%,#123553 46%,#1d4e74 100%);
+  --bg-soft:#f6f5f7;
+  --panel-2:#ebe9ed;
+  --line:rgba(38,37,42,.12);
+  --line-strong:rgba(38,37,42,.24);
+  --ink:#232226;
+  --ink-soft:#4f4d54;
+  --ink-mute:#716f76;
+  --logo-grau:#817f84;          /* Logo-Grau                            */
+  --brand:#b20058;              /* Logo-Magenta – Buttons, Akzente      */
+  --brand-dark:#93004a;         /* Hover-Zustand                        */
+  --brand-rgb:178,0,88;         /* dieselbe Farbe für Schatten/Fokus    */
+  --brand-700:#b20058;          /* Akzent als Text auf Weiß (6,9:1)     */
+  --brand-900:#26252a;          /* Anthrazit – Hero, Mid-CTA, Footer    */
+  --brand-900-rgb:38,37,42;
+  --brand-soft:#f9e8f0;         /* heller Magenta-Ton für Flächen       */
+  --on-brand:#ffffff;           /* Textfarbe AUF Magenta (6,9:1)        */
+  --on-dark-accent:#f4a6c8;     /* Magenta-Ton als Text auf Anthrazit   */
+  --grad:linear-gradient(125deg,#1d1c20 0%,#2e2d32 46%,#47454c 100%);
   --f-display:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
   --radius:16px;
-  --shadow:0 18px 50px rgba(15,43,70,.14);
+  --shadow:0 18px 50px rgba(38,37,42,.14);
   /* Feste Mindesthöhe des Formular-Inhalts – verhindert Springen beim
      Schrittwechsel. Wird in der Mobile-Query nicht aufgehoben! */
   --form-min:520px;          /* nachgemessen: höchster Schritt 518 px  */
@@ -76,16 +78,17 @@ a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 
 /* ---------- topbar ---------- */
-.topbar{position:fixed;inset:0 0 auto 0;z-index:50;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(var(--brand-900-rgb),.94);border-bottom:1px solid rgba(255,255,255,.14)}
+.topbar{position:fixed;inset:0 0 auto 0;z-index:50;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(255,255,255,.93);border-bottom:1px solid var(--line)}
 .topbar__inner{display:flex;align-items:center;justify-content:space-between;height:64px}
 .brand{display:flex;align-items:center}
-.brand__logo{display:none;height:42px;width:auto}
+.brand__logo{display:none;height:44px;width:auto}
 .brand__fallback{display:flex;flex-direction:column;line-height:1.02}
-.brand__name{font-family:var(--f-display);font-weight:900;font-size:22px;letter-spacing:.02em;color:#fff}
+.brand__name{font-family:var(--f-display);font-weight:900;font-size:22px;letter-spacing:.02em;color:var(--brand-900)}
 .brand__name em{font-style:normal;color:var(--brand)}
-.brand__sub{font-weight:700;font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:#c9d3de}
-.topbar__nav{display:flex;align-items:center;gap:26px;font-size:15.5px;font-weight:700;color:#d5dde6}
+.brand__sub{font-weight:700;font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mute)}
+.topbar__nav{display:flex;align-items:center;gap:26px;font-size:15.5px;font-weight:700;color:var(--ink-soft)}
 .topbar__nav a:hover{color:var(--brand)}
+.topbar__nav .btn--primary:hover{color:var(--on-brand)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--f-display);font-weight:800;font-size:16.5px;padding:14px 28px;border-radius:10px;border:none;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;white-space:nowrap}
 .btn svg{width:18px;height:18px;stroke:currentColor;flex:0 0 auto}
 .btn--primary{background:var(--brand);color:var(--on-brand);box-shadow:0 8px 24px rgba(var(--brand-rgb),.38)}
@@ -100,41 +103,45 @@ img{max-width:100%;display:block}
 
 /* ---------- HERO ---------- */
 .hero{position:relative;overflow:hidden;background:var(--brand-900);padding:0}
-.hero__media{position:absolute;inset:0;background-color:#0a1f33;background-image:var(--grad);background-size:cover;background-position:center}
-.hero__media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,24,40,.4),transparent 60%)}
+.hero__media{position:absolute;inset:0;background-color:#1d1c20;background-image:var(--grad);background-size:cover;background-position:center}
+.hero__media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(29,28,32,.35),transparent 45%)}
+/* Desktop: Das Foto beginnt erst hinter der Textspalte und läuft weich ins
+   Anthrazit aus – so bleibt das Motiv sichtbar und der Text steht nie auf
+   hellem Foto. Den Bildausschnitt steuert HERO_IMG[…].pos im Skript. */
+@media(min-width:821px){.hero__media{left:calc(50% - 40px);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 240px);mask-image:linear-gradient(90deg,transparent 0,#000 240px)}}
 /* Eigener Stacking-Kontext: sonst überdeckt .hero__media den Abdunkler
    hinter dem Text (z-index:-1) und der Kontrast bricht ein. */
 .hero .shell{position:relative;z-index:1}
 .hero__inner{position:relative;display:flex;min-height:580px}
 .hero__panel{position:relative;flex:0 0 56%;max-width:660px;display:flex;flex-direction:column;justify-content:center;padding:150px 48px 56px;color:#fff}
-.hero__panel>*{text-shadow:0 1px 14px rgba(6,18,30,.5)}
+.hero__panel>*{text-shadow:0 1px 14px rgba(20,19,22,.5)}
 .hero__cta .btn{text-shadow:none}
-.hero__panel::before{content:"";position:absolute;inset:0 auto 0 -100vw;width:calc(100vw + 62%);background:linear-gradient(112deg,rgba(10,31,51,.97) 0%,rgba(18,53,83,.93) 46%,rgba(29,78,116,.55) 100%);z-index:-1;border-radius:0 62% 62% 0 / 0 50% 50% 0;box-shadow:0 30px 80px rgba(10,31,51,.35)}
+.hero__panel::before{content:"";position:absolute;inset:0 auto 0 -100vw;width:calc(100vw + 62%);background:linear-gradient(112deg,rgba(29,28,32,.98) 0%,rgba(38,37,42,.95) 46%,rgba(56,54,60,.80) 100%);z-index:-1;border-radius:0 62% 62% 0 / 0 50% 50% 0;box-shadow:0 30px 80px rgba(29,28,32,.35)}
 .hero__logo{margin-bottom:26px}
-.hero__logo img{display:none;height:88px;width:auto}
+.hero__logo img{display:none;height:96px;width:auto}
 .hero__logo .brand__fallback b{font-family:var(--f-display);font-weight:900;font-size:36px;letter-spacing:.02em;color:#fff;line-height:1}
 .hero__logo .brand__fallback b em{font-style:normal;color:var(--brand)}
-.hero__logo .brand__fallback span{display:block;font-size:10px;font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:#d6dee7;margin-top:6px}
+.hero__logo .brand__fallback span{display:block;font-size:10px;font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:#dedde2;margin-top:6px}
 .hero__eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--on-dark-accent);margin-bottom:16px}
-.hero__eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 4px rgba(var(--brand-rgb),.30)}
+.hero__eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 4px rgba(var(--brand-rgb),.45)}
 .hero h1{color:#fff;font-size:clamp(32px,4.6vw,54px);font-weight:900;line-height:1.06}
-.hero__sub{margin-top:14px;font-size:19px;font-weight:600;color:#e6ecf2;max-width:480px}
+.hero__sub{margin-top:14px;font-size:19px;font-weight:600;color:#ececef;max-width:480px}
 .hero__cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
-.hero__reassure{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;font-weight:700;color:#d3dce5}
+.hero__reassure{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;font-weight:700;color:#dedde2}
 .hero__reassure span{display:inline-flex;align-items:center;gap:7px}
-.hero__reassure svg{width:16px;height:16px;stroke:var(--brand)}
+.hero__reassure svg{width:16px;height:16px;stroke:var(--on-dark-accent)}
 @media(max-width:820px){
   .hero__inner{min-height:0}
   .hero__panel{flex:1 1 100%;max-width:none;padding:100px 22px 46px}
-  .hero__panel::before{inset:0 -18px;width:auto;border-radius:0;background:linear-gradient(180deg,rgba(10,31,51,.80) 0%,rgba(15,43,70,.90) 100%)}
-  .hero__media::after{background:linear-gradient(180deg,rgba(10,31,51,.2),rgba(10,31,51,.55))}
+  .hero__panel::before{inset:0 -18px;width:auto;border-radius:0;background:linear-gradient(180deg,rgba(29,28,32,.82) 0%,rgba(38,37,42,.92) 100%)}
+  .hero__media::after{background:linear-gradient(180deg,rgba(29,28,32,.2),rgba(29,28,32,.55))}
 }
 
 /* ---------- trust band ---------- */
 .trust{background:#fff;border-bottom:1px solid var(--line)}
 .trust__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
 .trust__item{background:#fff;display:flex;align-items:center;gap:13px;padding:22px 20px}
-.trust__item svg{width:26px;height:26px;stroke:var(--brand-dark);flex:0 0 auto}
+.trust__item svg{width:26px;height:26px;stroke:var(--brand);flex:0 0 auto}
 .trust__item b{display:block;font-family:var(--f-display);font-weight:800;font-size:16px;color:var(--brand-900);line-height:1.2}
 .trust__item span{font-size:13.5px;color:var(--ink-mute);font-weight:600}
 @media(max-width:820px){.trust__grid{grid-template-columns:1fr 1fr}}
@@ -193,13 +200,13 @@ section[id],.form-card{scroll-margin-top:80px}
 .midcta::before{content:"";position:absolute;inset:0;background:var(--grad);opacity:.97}
 .midcta__in{position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:44px 0}
 .midcta h2{color:#fff;font-size:clamp(24px,3.4vw,34px);max-width:640px}
-.midcta p{color:#dbe3eb;font-weight:600;margin-top:6px}
+.midcta p{color:#dedde2;font-weight:600;margin-top:6px}
 
 /* ---------- form ---------- */
 .apply{position:relative;background:var(--bg-soft)}
 .apply__reassure{margin:14px auto 0;display:flex;justify-content:center;flex-wrap:wrap;gap:8px 20px;font-size:14.5px;font-weight:700;color:var(--brand-700)}
 .apply__reassure span{display:inline-flex;align-items:center;gap:7px}
-.apply__reassure svg{width:17px;height:17px;stroke:var(--brand-dark)}
+.apply__reassure svg{width:17px;height:17px;stroke:var(--brand)}
 .form-card{position:relative;max-width:660px;margin:36px auto 0;background:#fff;border:1.5px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
 .apply__contact{max-width:660px;margin:18px auto 0;text-align:center;font-size:15.5px;font-weight:600;color:var(--ink-soft)}
 .apply__contact a{color:var(--brand-700);text-decoration:underline;white-space:nowrap}
@@ -221,7 +228,7 @@ section[id],.form-card{scroll-margin-top:80px}
 .fstep .hint b{font-weight:900;color:var(--brand-700)}
 .fstep .hint b.is-optional{color:var(--ink-mute)}
 .choice-grid{display:grid;gap:10px}
-.choice{position:relative;display:flex;align-items:center;gap:13px;background:#fff;border:1.5px solid var(--line-strong);border-radius:10px;padding:14px 15px;cursor:pointer;transition:border-color .15s ease,background .15s ease,transform .15s ease;font-size:16px;font-weight:700;color:var(--ink);box-shadow:0 1px 3px rgba(15,43,70,.05);line-height:1.3}
+.choice{position:relative;display:flex;align-items:center;gap:13px;background:#fff;border:1.5px solid var(--line-strong);border-radius:10px;padding:14px 15px;cursor:pointer;transition:border-color .15s ease,background .15s ease,transform .15s ease;font-size:16px;font-weight:700;color:var(--ink);box-shadow:0 1px 3px rgba(38,37,42,.05);line-height:1.3}
 .choice:hover{border-color:var(--brand);transform:translateY(-1px)}
 .choice input{position:absolute;opacity:0;pointer-events:none}
 .choice .key{flex:0 0 28px;height:28px;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:13.5px;background:var(--brand-900);border-radius:6px;color:#fff}
@@ -246,7 +253,7 @@ section[id],.form-card{scroll-margin-top:80px}
 .result{display:none;flex-direction:column;align-items:center;text-align:center;padding:30px 8px;animation:fadeUp .4s ease}
 .result.is-visible{display:flex}
 .result__icon{width:72px;height:72px;border-radius:50%;display:grid;place-items:center;background:var(--brand-soft);border:1.5px solid var(--line-strong);margin-bottom:20px}
-.result__icon svg{width:33px;height:33px;stroke:var(--brand-dark)}
+.result__icon svg{width:33px;height:33px;stroke:var(--brand)}
 .result h3{font-size:25px;margin-bottom:10px}
 .result p{color:var(--ink-soft);max-width:440px;font-size:16px;font-weight:500}
 .result a{color:var(--brand-700);text-decoration:underline;font-weight:700}
@@ -257,23 +264,23 @@ section[id],.form-card{scroll-margin-top:80px}
 .faq details{background:#fff;border:1.5px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
 .faq summary{list-style:none;cursor:pointer;padding:18px 22px;font-family:var(--f-display);font-weight:800;font-size:17px;color:var(--brand-900);display:flex;justify-content:space-between;align-items:center;gap:16px}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";font-size:22px;color:var(--brand-dark);transition:transform .2s ease}
+.faq summary::after{content:"+";font-size:22px;color:var(--brand);transition:transform .2s ease}
 .faq details[open] summary::after{transform:rotate(45deg)}
 .faq .faq__a{padding:0 22px 20px;font-size:15px;color:var(--ink-soft);font-weight:500}
 
 /* ---------- footer ---------- */
-footer{padding:52px 0 36px;background:var(--brand-900);color:#d3dbe4}
+footer{padding:52px 0 36px;background:var(--brand-900);color:#dedde2}
 .footer__grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
-.footer__brand img{display:none;height:66px;width:auto;margin-bottom:6px}
+.footer__brand img{display:none;height:72px;width:auto;margin-bottom:10px}
 .footer__brand b{font-family:var(--f-display);font-weight:900;font-size:26px;letter-spacing:.02em;color:#fff}
 .footer__brand b em{font-style:normal;color:var(--brand)}
-.footer__brand .brand__sub{color:#aebccb;font-size:9px;margin-top:3px}
-.footer__col p{font-size:14.5px;color:#a7b5c4;margin-top:12px;max-width:340px;font-weight:500}
+.footer__brand .brand__sub{color:#b4b2b9;font-size:9px;margin-top:3px}
+.footer__col p{font-size:14.5px;color:#b4b2b9;margin-top:12px;max-width:340px;font-weight:500}
 .footer__col b{font-family:var(--f-display);font-weight:800;font-size:15.5px;color:#fff}
-.footer__col ul{list-style:none;margin-top:12px;display:grid;gap:8px;font-size:14.5px;color:#a7b5c4;font-weight:500}
-.footer__col a:hover{color:var(--brand)}
-.footer__legal{margin-top:42px;padding-top:22px;border-top:1px solid rgba(255,255,255,.16);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#8797a8;font-weight:500}
-.footer__legal a{color:#a7b5c4}
+.footer__col ul{list-style:none;margin-top:12px;display:grid;gap:8px;font-size:14.5px;color:#b4b2b9;font-weight:500}
+.footer__col a:hover{color:var(--on-dark-accent)}
+.footer__legal{margin-top:42px;padding-top:22px;border-top:1px solid rgba(255,255,255,.16);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#99979e;font-weight:500}
+.footer__legal a{color:#b4b2b9}
 
 /* ---------- reveal ---------- */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
@@ -753,7 +760,9 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d3dbe4}
   /* ---------- Original-Logo laden (Fallback: Schriftzug) ----------
      Logo-Datei einfach in bilder/ ablegen – wird eine gefunden, ersetzt
      sie automatisch den Text. */
-  var LOGO_CANDIDATES = ["bilder/logo-weiss.svg","bilder/logo-weiss.png","bilder/logo.svg","bilder/logo.png","bilder/schumann-hardt-logo.svg","bilder/schumann-hardt-logo.png"];
+  /* bilder/logo.png = Original-Logo, nur transparenter Rand entfernt und
+     für das Web verkleinert (Original: bilder/Logo s+h-1794221523.png). */
+  var LOGO_CANDIDATES = ["bilder/logo.png"];
   function loadLogo(img, bases){
     if (!img) return;
     var i = 0;
@@ -774,12 +783,15 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d3dbe4}
   loadLogo(document.getElementById("logoFooter"), LOGO_CANDIDATES);
 
   /* ---------- Hero-Foto ----------
-     Je Stelle ein eigenes Bild; ohne Deeplink das allgemeine. Fehlt eine
-     Datei, bleibt der Farbverlauf stehen – nie ein kaputtes Bild. */
+     Je Stelle ein eigenes Bild; ohne Deeplink das allgemeine. "pos" ist
+     der Bildausschnitt (Motiv im sichtbaren Bereich rechts vom Text).
+     Fehlt eine Datei, bleibt der Farbverlauf stehen – nie ein kaputtes Bild.
+       hero.jpg               = Schwimmgreifer (web-optimiert)
+       hero-mechatroniker.jpg = Neubau Aufbereitung (web-optimiert) */
   var HERO_IMG = {
-    "":               "bilder/hero.jpg",
-    "mechatroniker":  "bilder/hero-mechatroniker.jpg",
-    "geraetefuehrer": "bilder/hero-geraetefuehrer.jpg"
+    "":               { src:"bilder/hero.jpg",               pos:"15% 50%" },
+    "mechatroniker":  { src:"bilder/hero-mechatroniker.jpg", pos:"16% 50%" },
+    "geraetefuehrer": { src:"bilder/hero.jpg",               pos:"15% 50%" }
   };
   function setHeroBild(key){
     var media = document.getElementById("heroMedia");
@@ -787,9 +799,9 @@ footer{padding:52px 0 36px;background:var(--brand-900);color:#d3dbe4}
     (function tryNext(i){
       if (i >= cands.length) return;
       var probe = new Image();
-      probe.onload  = function(){ media.style.backgroundImage = "url('" + cands[i] + "')"; };
+      probe.onload  = function(){ media.style.backgroundImage = "url('" + cands[i].src + "')"; media.style.backgroundPosition = cands[i].pos; };
       probe.onerror = function(){ tryNext(i+1); };
-      probe.src = cands[i];
+      probe.src = cands[i].src;
     })(0);
   }
 
