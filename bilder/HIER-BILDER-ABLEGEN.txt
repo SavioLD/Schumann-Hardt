@@ -1,0 +1,28 @@
+BILDMATERIAL FÜR DIE KARRIERESEITE
+==================================
+
+Alle Dateien einfach in diesen Ordner (bilder/) hochladen – Dateinamen
+egal. Die Zuordnung (Logo, Hero je Stelle, Creatives) wird danach im Code
+eingetragen. Bis dahin zeigt die Seite den Farbverlauf bzw. den
+Text-Schriftzug (nie ein kaputtes Bild).
+
+1) LOGO
+   Am besten als SVG oder PNG mit transparentem Hintergrund – wenn
+   vorhanden in zwei Varianten: normal + helle/weiße Variante (für die
+   dunklen Flächen in Topbar, Hero und Footer).
+
+   Das Original-Logo wird unverändert eingesetzt – nicht nachgebaut,
+   nicht eingefärbt, Seitenverhältnis nicht verzerrt. Die Seitenfarben
+   werden anschließend direkt aus dem Logo ausgelesen.
+
+2) FOTOS
+   Kieswerk, Anlagen, Radlader, Schwimmgreifer, Verladung, Team bei der
+   Arbeit – je mehr echtes Material, desto besser die Creatives.
+   Querformat für den Hero (mind. ~1600 px breit), Hochformat ist für
+   die 4:5- und 9:16-Creatives willkommen.
+
+   Ideal: mindestens ein Motiv je Stelle
+   - Mechatroniker: Wartung/Instandsetzung an Maschine oder Anlage
+   - Geräteführer:  Radlader, Schwimmgreifer, Aufbereitungsanlage
+
+Die Seite verwendet später ausschließlich dieses Material.
