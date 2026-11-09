@@ -10,7 +10,8 @@ Ausgeschriebene Stellen: **Mechatroniker (m/w/d)** und **Geräteführer (m/w/d)*
 Aufbau und Sektionen 1:1 nach der ALWA-Referenzseite
 (`saviold.github.io/alwa-gmbh/`): Topbar · Sticky-Mobile-CTA · Hero ·
 Trust-Band · Offene Stellen · Benefits · Ablauf · Mid-CTA · Bewerbung ·
-FAQ · Footer.
+FAQ · Footer – ergänzt um die Fotogalerie „Einblicke“ (auf Wunsch, damit
+mehr vom hochgeladenen Bildmaterial zu sehen ist).
 
 ## Inhalt
 
@@ -59,6 +60,20 @@ abgeleitete Web-Dateien:
 | `Neubau Aufbereitung-1794221524.jpg` | Original | Creatives |
 | `hero-mechatroniker.jpg` | Neubau Aufbereitung, web-optimiert (2200 px) | Hero Mechatroniker |
 | `SchwimmbÃ¤nder-1794221524.jpg` | Original (Umlaut beim Upload verunstaltet) | Creatives |
+| `aufbereitung-1400.jpg` | Neubau Aufbereitung, 1400 px | Stellenkarte Mechatroniker, Galerie |
+| `schwimmgreifer-1400.jpg` | Schwimmgreifer, 1400 px | Stellenkarte Geräteführer, Galerie (mobil) |
+| `schwimmbaender-1400.jpg` | Schwimmbänder, 1400 px | Galerie, Hintergrund Mid-CTA |
+
+**Wo die Fotos auf der Seite stehen**
+
+- **Hero** – Schwimmgreifer (allgemein, Geräteführer) bzw. Aufbereitungsanlage (Mechatroniker)
+- **Stellenkarten** – je ein Foto oben: Aufbereitungsanlage (Mechatroniker), Schwimmgreifer (Geräteführer)
+- **Einblicke** (neue Sektion zwischen Benefits und Ablauf) – alle drei Fotos als Galerie mit Bildunterschrift
+- **Mid-CTA** – Schwimmbänder als abgedunkelter Hintergrund
+
+Alle Bilder unterhalb des Heros laden erst bei Bedarf (`loading="lazy"`)
+und haben eine feste Seitenverhältnis-Box – beim Nachladen verschiebt
+sich nichts. Die Laufruhe-Messung unten ist mit allen Bildern wiederholt.
 
 Das Logo wird nur verkleinert und um den leeren Rand gekürzt – nicht
 nachgebaut, nicht eingefärbt, Seitenverhältnis unverändert.
