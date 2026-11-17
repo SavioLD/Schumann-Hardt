@@ -205,13 +205,13 @@ h1 .akzent{color:${CI.akzent}}
 <script>
 /* Headline verkleinern, bis der Textblock sicher in seinen Rahmen passt
    (nie ins Logo, nie in die Safe Zone). */
-(function(){
+document.fonts.ready.then(function(){
   var h=document.querySelector('h1'), f=document.querySelector('.frame'), inn=document.querySelector('.inner');
   var px=parseFloat(getComputedStyle(h).fontSize), n=0;
   while(inn.offsetHeight>f.clientHeight && px>40 && n++<80){ px-=2; h.style.fontSize=px+'px'; }
   document.documentElement.dataset.headpx=px;
   document.documentElement.dataset.ready='1';
-})();
+});
 </script></body></html>`;
 }
 

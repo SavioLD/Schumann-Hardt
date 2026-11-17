@@ -308,3 +308,33 @@ Dateinamen: `<stelle>-<motiv>-<format>.png`, z. B.
 
 **Werbetexte:** `creatives/werbetexte.md` – drei Varianten, jede mit jedem
 Creative kombinierbar.
+
+## Creatives Serie 2 – „Nichts für Schönwetter-Typen“
+
+Laute, ehrliche Serie in `creatives/v2/`: Rohstoffindustrie, viel draußen,
+im Winter auch mal nass und ungemütlich – dafür **überdurchschnittlich
+bezahlt** (Angabe des Kunden). Ziel: maximal auffallen, genau die
+richtigen Leute ansprechen und möglichst viele Bewerbungen holen.
+
+```bash
+node creatives/build-v2.mjs
+```
+
+**12 Creatives** – 2 Stellen × 3 Motive × 4:5 / 9:16:
+
+| Motiv | Mechatroniker | Geräteführer |
+|-------|---------------|--------------|
+| `absperrband` | Absperrband „Achtung: Nichts für Schönwetter-Typen“ + „Regen. Kälte. Matsch. Na und?“ + Sticker „Überdurchschnittlich bezahlt“ (Foto: Aufbereitung) | dito (Foto: Schwimmbänder) |
+| `block` | Magenta-Block „Kein Bürojob. Zum Glück.“ + Sticker (Foto: Schwimmbänder) | „Dein Arbeitsplatz schwimmt.“ + Sticker (Foto: Schwimmgreifer) |
+| `ehrlich` | „Ehrlich gesagt: Das ist kein Schönwetter-Job.“ + Liste: Rohstoffindustrie, viel draußen/nass, Technik, überdurchschnittlich bezahlt (Foto: Schwimmgreifer) | dito (Foto: Aufbereitung) |
+
+Dateinamen: `creatives/v2/<stelle>-<motiv>-<format>.png`. Große Headlines
+in **Barlow Condensed** (gleiche Schriftfamilie wie die Seite, liegt in
+`creatives/fonts/`), sonst CI wie Serie 1. Safe Zones bei 9:16 wie gehabt.
+
+**Werbetexte:** `creatives/v2/werbetexte.md` – je Stelle drei Primärtexte,
+eine Überschrift, eine Beschreibung.
+
+> Hinweis: Die Karriereseite nennt die überdurchschnittliche Bezahlung und
+> die Arbeit bei Wind und Wetter bisher nicht. Für eine durchgängige
+> Botschaft von der Anzeige bis zur Bewerbung sollte sie das ebenfalls tun.
