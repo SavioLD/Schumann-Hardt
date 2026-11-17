@@ -309,12 +309,13 @@ Dateinamen: `<stelle>-<motiv>-<format>.png`, z. B.
 **Werbetexte:** `creatives/werbetexte.md` – drei Varianten, jede mit jedem
 Creative kombinierbar.
 
-## Creatives Serie 2 – „Nichts für Schönwetter-Typen“
+## Creatives Serie 2 – „Schlechtes Wetter. Gutes Geld.“
 
-Laute, ehrliche Serie in `creatives/v2/`: Rohstoffindustrie, viel draußen,
+Ehrliche, laute Serie in `creatives/v2/`: Rohstoffindustrie, viel draußen,
 im Winter auch mal nass und ungemütlich – dafür **überdurchschnittlich
-bezahlt** (Angabe des Kunden). Ziel: maximal auffallen, genau die
-richtigen Leute ansprechen und möglichst viele Bewerbungen holen.
+bezahlt** (Angabe des Kunden). Jedes Motiv: Stelle sofort erkennbar, ein
+starker Satz, wenig Kleingedrucktes, klarer CTA („Jetzt in 60 Sek.
+bewerben – ohne Anschreiben, ohne Lebenslauf“).
 
 ```bash
 node creatives/build-v2.mjs
@@ -322,17 +323,18 @@ node creatives/build-v2.mjs
 
 **12 Creatives** – 2 Stellen × 3 Motive × 4:5 / 9:16:
 
-| Motiv | Mechatroniker | Geräteführer |
-|-------|---------------|--------------|
-| `absperrband` | Absperrband „Achtung: Nichts für Schönwetter-Typen“ + „Regen. Kälte. Matsch. Na und?“ + Sticker „Überdurchschnittlich bezahlt“ (Foto: Aufbereitung) | dito (Foto: Schwimmbänder) |
-| `block` | Magenta-Block „Kein Bürojob. Zum Glück.“ + Sticker (Foto: Schwimmbänder) | „Dein Arbeitsplatz schwimmt.“ + Sticker (Foto: Schwimmgreifer) |
-| `ehrlich` | „Ehrlich gesagt: Das ist kein Schönwetter-Job.“ + Liste: Rohstoffindustrie, viel draußen/nass, Technik, überdurchschnittlich bezahlt (Foto: Schwimmgreifer) | dito (Foto: Aufbereitung) |
+| Motiv | Aussage | Foto Mechatroniker | Foto Geräteführer |
+|-------|---------|--------------------|-------------------|
+| `wetter` | „Schlechtes Wetter. Gutes Geld.“ als Plakat-Blöcke, Stelle groß darüber | Aufbereitung | Schwimmbänder |
+| `fell` | „<Stelle> mit dickem Fell gesucht.“ + Absperrband „Nichts für Schönwetter-Typen“ + Sticker „Überdurchschnittlich bezahlt“ | Schwimmbänder | Schwimmgreifer |
+| `check` | „Passt das zu dir?“ – Checkliste zum Selbst-Abhaken (Qualifikation, wetterfest, lieber Kieswerk als Büro, mehr verdienen) | Schwimmgreifer | Aufbereitung |
 
-Dateinamen: `creatives/v2/<stelle>-<motiv>-<format>.png`. Große Headlines
-in **Barlow Condensed** (gleiche Schriftfamilie wie die Seite, liegt in
-`creatives/fonts/`), sonst CI wie Serie 1. Safe Zones bei 9:16 wie gehabt.
+Dateinamen: `creatives/v2/<stelle>-<motiv>-<format>.png`. Headlines in
+**Barlow Condensed** (gleiche Schriftfamilie wie die Seite, liegt in
+`creatives/fonts/`). Safe Zones bei 9:16 wie gehabt.
 
-**Werbetexte:** `creatives/v2/werbetexte.md` – je Stelle drei Primärtexte,
+**Werbetexte:** `creatives/v2/werbetexte.md` – je Stelle drei Primärtexte
+(Szene aus dem Arbeitsalltag · kurz und direkt · bewusst aussortieren),
 eine Überschrift, eine Beschreibung.
 
 > Hinweis: Die Karriereseite nennt die überdurchschnittliche Bezahlung und

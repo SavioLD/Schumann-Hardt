@@ -1,16 +1,18 @@
 /* =====================================================================
    CREATIVES SERIE 2 · Schumann & Hardt GmbH & Co. KG
    ---------------------------------------------------------------------
-   Laute, ehrliche Serie: Rohstoffindustrie, viel draußen, im Winter
+   Ehrlich UND verlockend: Rohstoffindustrie, viel draußen, im Winter
    auch mal nass und ungemütlich – dafür überdurchschnittlich bezahlt.
-   Ziel: maximal auffallen, genau die richtigen Leute ansprechen und
-   so überzeugen, dass sie sich bewerben.
+   Jedes Motiv: Stelle sofort erkennbar, ein starker Satz, wenig
+   Kleingedrucktes, klarer CTA.
 
      node creatives/build-v2.mjs      -> creatives/v2/
 
-   Ergebnis: je Stelle 3 Motive x 2 Formate (4:5, 9:16) = 12 Creatives.
-   CI wie Karriereseite: Logo-Magenta, Anthrazit, Barlow (für die großen
-   Headlines Barlow Condensed aus derselben Schriftfamilie).
+   Ergebnis: je Stelle 3 Motive x 2 Formate (4:5, 9:16) = 12 Creatives
+     wetter – „Schlechtes Wetter. Gutes Geld.“
+     fell   – „<Stelle> mit dickem Fell gesucht.“ + Absperrband + Sticker
+     check  – „Passt das zu dir?“ – Checkliste zum Selbst-Abhaken
+   CI wie Karriereseite: Logo-Magenta, Anthrazit, Barlow / Barlow Condensed.
    Bildmaterial ausschließlich aus bilder/, Logo unverändert.
    ===================================================================== */
 
@@ -25,7 +27,7 @@ const OUT  = join(HERE, 'v2');
 const TMP  = join(OUT, '.render.html');
 mkdirSync(OUT, { recursive: true });
 
-const CI = { brand: '#b20058', brandRgb: '178,0,88', dunkel: '#26252a', akzent: '#f4a6c8', hell: '#f1f0f3' };
+const CI = { brand: '#b20058', brandRgb: '178,0,88', dunkel: '#26252a', akzent: '#f4a6c8' };
 
 /* ---------- Schriften lokal einbetten ---------- */
 const ff = (fam, w, file) =>
@@ -45,7 +47,7 @@ function finde(prefix) {
 const url = rel => '../../' + rel.split('/').map(encodeURIComponent).join('/');
 const FOTOS = {
   aufbereitung:   { src: finde('Neubau Aufbereitung'), w: 2560, h: 1211, fx: 0.34, fy: 0.42 },
-  schwimmbaender: { src: finde('Schwimmb'),            w: 2000, h: 924,  fx: 0.72, fy: 0.40 },
+  schwimmbaender: { src: finde('Schwimmb'),            w: 2000, h: 924,  fx: 0.70, fy: 0.38 },
   schwimmgreifer: { src: finde('Schwimmgreifer'),      w: 2560, h: 1183, fx: 0.33, fy: 0.50 }
 };
 const LOGO = 'bilder/logo-hd.png';
@@ -59,69 +61,60 @@ function position(foto, bw, bh) {
 
 /* ---------- Icons ---------- */
 const ICON = {
+  schild: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/>',
   werk:   '<path d="M2 20h20"/><path d="M4 20V10l5 3v-3l5 3V5h6v15"/>',
-  regen:  '<path d="M20 16.6A5 5 0 0 0 18 7h-1.3A8 8 0 1 0 4 15.3"/><path d="M8 19v2M8 13v2M16 19v2M16 13v2M12 21v2M12 15v2"/>',
-  technik:'<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
-  geld:   '<path d="M18.5 6.5A7.5 7.5 0 1 0 18.5 17.5"/><path d="M3.5 10h10M3.5 14h10"/>',
-  schild: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/>'
+  pin:    '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/>'
 };
 const PFEIL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>';
+const HAKEN = `<svg viewBox="0 0 24 24" fill="none" stroke="${CI.brand}" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>`;
 
 /* ---------- Stellen + Motive ---------- */
 const STELLEN = [
   {
-    key: 'mechatroniker', titel: 'Mechatroniker (m/w/d)',
+    key: 'mechatroniker',
     motive: {
-      absperrband: {
+      wetter: {
         foto: 'aufbereitung',
-        head: 'Regen. Kälte.<br>Matsch.<br><span class="akzent">Na und?</span>',
-        sub: 'Als <b>Mechatroniker (m/w/d)</b> hältst du unser Kieswerk am Laufen – draußen, bei jedem Wetter, mitten in der Rohstoffindustrie.',
-        cta: 'Jetzt in 60 Sek. bewerben'
+        callout: 'Mechatroniker (m/w/d) gesucht',
+        sub: 'Viel draußen im Kieswerk – auch wenn’s im Winter nass und ungemütlich wird. Dafür zahlen wir überdurchschnittlich.',
+        proofs: [['schild', 'Sicherer Job mit Zukunft'], ['pin', 'Babenhausen']]
       },
-      block: {
+      fell: {
         foto: 'schwimmbaender',
-        head: 'Kein Bürojob.<br><mark>Zum Glück.</mark>',
-        zeile: 'Mechatroniker (m/w/d) gesucht',
-        chips: ['Viel draußen', 'Rohstoffindustrie', 'Vollzeit'],
-        cta: 'Jetzt bewerben'
+        head: '<span class="akzent">Mechatroniker</span><br>mit dickem Fell<br>gesucht.',
+        sub: 'Regen, Wind und Matsch schrecken dich nicht? Dann bist du im Kieswerk am Haselsee genau richtig.'
       },
-      ehrlich: {
+      check: {
         foto: 'schwimmgreifer',
-        label: 'Ehrlich gesagt:',
-        head: 'Das ist kein <span class="akzent nowrap">Schönwetter-Job.</span>',
-        liste: [['werk', 'Rohstoffindustrie: Kieswerk statt Büro'],
-                ['regen', 'Viel draußen – im Winter auch mal nass und ungemütlich'],
-                ['technik', 'Instandsetzung an Radlader, Schwimmgreifer & Anlage'],
-                ['geld', 'Dafür: überdurchschnittlich bezahlt']],
-        cta: 'Klingt nach dir? Jetzt bewerben'
+        callout: 'Mechatroniker (m/w/d) · Babenhausen',
+        liste: ['Ausbildung als Mechatroniker oder Schlosser',
+                'Wetter? Ist dir egal.',
+                'Lieber Kieswerk als Großraumbüro',
+                'Du willst überdurchschnittlich verdienen']
       }
     }
   },
   {
-    key: 'geraetefuehrer', titel: 'Geräteführer (m/w/d)',
+    key: 'geraetefuehrer',
     motive: {
-      absperrband: {
+      wetter: {
         foto: 'schwimmbaender',
-        head: 'Regen. Kälte.<br>Matsch.<br><span class="akzent">Na und?</span>',
-        sub: 'Als <b>Geräteführer (m/w/d)</b> bedienst du Radlader, Schwimmgreifer und Aufbereitung – draußen, bei jedem Wetter, mitten in der Rohstoffindustrie.',
-        cta: 'Jetzt in 60 Sek. bewerben'
+        callout: 'Geräteführer (m/w/d) gesucht',
+        sub: 'Radlader, Schwimmgreifer, Aufbereitung – draußen, bei jedem Wetter. Dafür zahlen wir überdurchschnittlich.',
+        proofs: [['schild', 'Sicherer Job mit Zukunft'], ['pin', 'Babenhausen']]
       },
-      block: {
+      fell: {
         foto: 'schwimmgreifer',
-        head: 'Dein Arbeitsplatz<br><mark>schwimmt.</mark>',
-        zeile: 'Geräteführer (m/w/d) gesucht',
-        chips: ['Viel draußen', 'Rohstoffindustrie', 'Vollzeit'],
-        cta: 'Jetzt bewerben'
+        head: '<span class="akzent">Geräteführer</span><br>mit dickem Fell<br>gesucht.',
+        sub: 'Regen, Wind und Matsch schrecken dich nicht? Dann gehören Radlader und Schwimmgreifer bald dir.'
       },
-      ehrlich: {
+      check: {
         foto: 'aufbereitung',
-        label: 'Ehrlich gesagt:',
-        head: 'Das ist kein <span class="akzent nowrap">Schönwetter-Job.</span>',
-        liste: [['werk', 'Rohstoffindustrie: Kieswerk statt Büro'],
-                ['regen', 'Viel draußen – im Winter auch mal nass und ungemütlich'],
-                ['technik', 'Radlader, Schwimmgreifer, Aufbereitungsanlage'],
-                ['geld', 'Dafür: überdurchschnittlich bezahlt']],
-        cta: 'Klingt nach dir? Jetzt bewerben'
+        callout: 'Geräteführer (m/w/d) · Babenhausen',
+        liste: ['Du fährst Radlader & Co. sicher',
+                'Wetter? Ist dir egal.',
+                'Lieber Kieswerk als Großraumbüro',
+                'Du willst überdurchschnittlich verdienen']
       }
     }
   }
@@ -130,49 +123,33 @@ const STELLEN = [
 /* ---------- Formate ----------
    9:16: oben 250 px und unten 340 px frei von Text/Logo (Safe Zones). */
 const FORMATE = {
-  '4x5':  { w: 1080, h: 1350, top: 48,  bottom: 64,  padX: 64, logoH: 88,  head: 136, sub: 33, sticker: 250 },
-  '9x16': { w: 1080, h: 1920, top: 270, bottom: 340, padX: 72, logoH: 100, head: 156, sub: 36, sticker: 270 }
-};
-
-/* ---------- Bausteine ---------- */
-const sticker = (fmt, hell) => `<div class="sticker${hell ? ' sticker--hell' : ''}"><div><small>Überdurch-<br>schnittlich</small><b>bezahlt</b></div></div>`;
-const tape = () => {
-  return `<div class="tape"><span>· Achtung: Nichts für Schönwetter-Typen ·</span></div>`;
+  '4x5':  { w: 1080, h: 1350, top: 48,  bottom: 60,  padX: 64, logoH: 88,  head: 156, sub: 34, sticker: 250, call: 46 },
+  '9x16': { w: 1080, h: 1920, top: 270, bottom: 340, padX: 72, logoH: 100, head: 176, sub: 38, sticker: 270, call: 52 }
 };
 
 function seite(fmt, motivName, m) {
-  const foto = FOTOS[m.foto];
-  const hoch = fmt.h > 1500;   // 9:16
-  const fotoH = { absperrband: fmt.h, block: Math.round(fmt.h * (hoch ? .47 : .54)), ehrlich: Math.round(fmt.h * (hoch ? .40 : .46)) }[motivName];
-  const s = fmt.sub, H = fmt.head;
-  const chips = m.chips ? `<div class="chips">${m.chips.map(c => `<span>${c}</span>`).join('')}</div>` : '';
-  const liste = m.liste ? `<ul class="liste">${m.liste.map(([ic, t]) => `<li><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">${ICON[ic]}</svg></i><span>${t}</span></li>`).join('')}</ul>` : '';
-
-  let inhalt = '', deko = '', panel = '';
-  if (motivName === 'absperrband') {
-    deko = sticker(fmt) + tape();
-    inhalt = `<h1>${m.head}</h1><p class="sub">${m.sub}</p><div class="cta">${m.cta} ${PFEIL}</div>`;
-  } else if (motivName === 'block') {
-    panel = '<div class="panel"></div>';
-    deko = sticker(fmt, true);
-    inhalt = `<h1>${m.head}</h1><div class="zeile">${m.zeile}</div>${chips}<div class="cta cta--weiss">${m.cta} ${PFEIL}</div>`;
-  } else {
-    inhalt = `<div class="label">${m.label}</div><h1>${m.head}</h1>${liste}<div class="cta">${m.cta} ${PFEIL}</div>`;
-  }
-
+  const hoch = fmt.h > 1500, s = fmt.sub, foto = FOTOS[m.foto];
+  const fotoH = { wetter: Math.round(fmt.h * (hoch ? .43 : .46)), fell: fmt.h, check: Math.round(fmt.h * (hoch ? .40 : .36)) }[motivName];
+  const frameTop = { wetter: fotoH - 150, fell: Math.round(fmt.h * (hoch ? .37 : .41)), check: fotoH - 110 }[motivName];
   const verlauf = {
-    absperrband: 'linear-gradient(180deg,rgba(29,28,32,.10) 0%,rgba(29,28,32,.18) 30%,rgba(29,28,32,.80) 52%,rgba(38,37,42,.97) 66%,#26252a 100%)',
-    block: 'linear-gradient(180deg,rgba(29,28,32,0) 60%,rgba(29,28,32,.35) 100%)',
-    ehrlich: 'linear-gradient(180deg,rgba(29,28,32,0) 45%,rgba(38,37,42,.75) 80%,#26252a 100%)'
+    wetter: 'linear-gradient(180deg,rgba(29,28,32,0) 45%,rgba(38,37,42,.7) 78%,#26252a 100%)',
+    fell:   'linear-gradient(180deg,rgba(29,28,32,.08) 0%,rgba(29,28,32,.15) 28%,rgba(29,28,32,.82) 50%,rgba(38,37,42,.97) 64%,#26252a 100%)',
+    check:  'linear-gradient(180deg,rgba(29,28,32,0) 40%,rgba(38,37,42,.75) 80%,#26252a 100%)'
   }[motivName];
 
-  /* Rahmen für den Text: beginnt unter Logo/Band bzw. im Panel und endet
-     über der unteren Safe Zone. */
-  const frameTop = {
-    absperrband: Math.round(fmt.h * (hoch ? .37 : .43)),
-    block: fotoH - 40,
-    ehrlich: fotoH - 120
-  }[motivName];
+  const callout = m.callout ? `<div class="callout">${m.callout}</div>` : '';
+  const proofs = m.proofs ? `<div class="proofs">${m.proofs.map(([i, t]) => `<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">${ICON[i]}</svg>${t}</span>`).join('')}</div>` : '';
+  const cta = `<div class="ctawrap"><div class="cta">Jetzt in 60 Sek. bewerben ${PFEIL}</div><div class="ohne">Ohne Anschreiben.<br>Ohne Lebenslauf.</div></div>`;
+
+  let inhalt = '', deko = '';
+  if (motivName === 'wetter') {
+    inhalt = `${callout}<h1 class="bloecke"><span class="b1">Schlechtes</span><br><span class="b1">Wetter.</span><br><span class="b2">Gutes Geld.</span></h1><p class="sub">${m.sub}</p>${proofs}${cta}`;
+  } else if (motivName === 'fell') {
+    deko = `<div class="sticker"><div><small>Überdurch-<br>schnittlich</small><b>bezahlt</b></div></div><div class="tape"><span>· Achtung: Nichts für Schönwetter-Typen ·</span></div>`;
+    inhalt = `<h1>${m.head}</h1><p class="sub">${m.sub}</p>${cta}`;
+  } else {
+    inhalt = `${callout}<h1>Passt das<br>zu dir?</h1><ul class="liste">${m.liste.map(t => `<li><i>${HAKEN}</i><span>${t}</span></li>`).join('')}</ul><div class="alle">Alle Haken gesetzt? Dann suchen wir dich.</div>${cta}`;
+  }
 
   return `<!doctype html><html lang="de"><head><meta charset="utf-8"><style>
 ${FONTS}
@@ -184,61 +161,53 @@ body{font-family:Barlow,sans-serif;color:#fff;background:${CI.dunkel};position:r
 .logo{position:absolute;z-index:5;left:${fmt.padX}px;top:${fmt.top}px;background:#fff;border-radius:18px;padding:${Math.round(fmt.logoH*.16)}px ${Math.round(fmt.logoH*.24)}px;box-shadow:0 10px 34px rgba(0,0,0,.3)}
 .logo img{display:block;height:${fmt.logoH}px;width:auto}
 
-/* Sticker "Überdurchschnittlich bezahlt" */
 .sticker{position:absolute;z-index:6;right:${fmt.padX - 10}px;top:${fmt.top - 8}px;width:${fmt.sticker}px;height:${fmt.sticker}px;border-radius:50%;
-  background:${CI.brand};color:#fff;display:grid;place-items:center;text-align:center;transform:rotate(11deg);
+  background:${CI.brand};display:grid;place-items:center;text-align:center;transform:rotate(11deg);
   box-shadow:0 18px 44px rgba(0,0,0,.45),inset 0 0 0 9px ${CI.brand},inset 0 0 0 12px rgba(255,255,255,.9)}
 .sticker div{font-family:'Barlow Condensed';text-transform:uppercase;line-height:.9}
-.sticker small{display:block;font-weight:800;font-size:${Math.round(fmt.sticker*.15)}px;letter-spacing:.01em}
-.sticker b{display:block;font-weight:900;font-size:${Math.round(fmt.sticker*.235)}px;margin-top:6px;letter-spacing:.01em}
-.sticker--hell{background:#fff;color:${CI.brand};box-shadow:0 18px 44px rgba(0,0,0,.4),inset 0 0 0 9px #fff,inset 0 0 0 12px ${CI.brand}}
-
-/* Absperrband */
-.tape{position:absolute;z-index:4;left:-80px;right:-80px;top:${Math.round(fmt.h * (hoch ? .30 : .31))}px;transform:rotate(-6deg);
+.sticker small{display:block;font-weight:800;font-size:${Math.round(fmt.sticker*.15)}px}
+.sticker b{display:block;font-weight:900;font-size:${Math.round(fmt.sticker*.235)}px;margin-top:6px}
+.tape{position:absolute;z-index:4;left:-80px;right:-80px;top:${Math.round(fmt.h * (hoch ? .29 : .30))}px;transform:rotate(-6deg);
   background:${CI.brand};padding:${Math.round(s*.42)}px 0;box-shadow:0 14px 40px rgba(0,0,0,.45);overflow:hidden;white-space:nowrap;text-align:center}
 .tape::before,.tape::after{content:"";position:absolute;left:0;right:0;height:14px;background:repeating-linear-gradient(-45deg,#fff 0 16px,${CI.dunkel} 16px 32px)}
 .tape::before{top:0}.tape::after{bottom:0}
 .tape span{display:inline-block;font-family:'Barlow Condensed';font-weight:900;font-size:${Math.round(s*1.42)}px;letter-spacing:.04em;text-transform:uppercase;padding:8px 0}
 
-/* Magenta-Block mit schräger Kante */
-.panel{position:absolute;left:0;right:0;bottom:0;top:${fotoH - 110}px;background:${CI.brand};clip-path:polygon(0 110px,100% 0,100% 100%,0 100%)}
-
 .frame{position:absolute;z-index:3;left:${fmt.padX}px;right:${fmt.padX}px;top:${frameTop}px;bottom:${fmt.bottom}px;display:flex;flex-direction:column;justify-content:flex-end}
 .inner{display:flex;flex-direction:column}
-h1{font-family:'Barlow Condensed';font-weight:900;font-size:${H}px;line-height:.9;text-transform:uppercase;letter-spacing:-.005em;text-shadow:0 6px 30px rgba(0,0,0,.35)}
+/* Stelle sofort erkennbar */
+.callout{align-self:flex-start;background:${CI.brand};font-family:'Barlow Condensed';font-weight:900;font-size:${fmt.call}px;line-height:1;text-transform:uppercase;letter-spacing:.02em;
+  padding:${Math.round(fmt.call*.24)}px ${Math.round(fmt.call*.42)}px;border-radius:10px;margin-bottom:${Math.round(s*.85)}px;box-shadow:0 10px 30px rgba(${CI.brandRgb},.45)}
+h1{font-family:'Barlow Condensed';font-weight:900;font-size:${fmt.head}px;line-height:.9;text-transform:uppercase;letter-spacing:-.005em;text-shadow:0 6px 30px rgba(0,0,0,.35)}
 h1 .akzent{color:${CI.akzent}}
-h1 .nowrap{white-space:nowrap}
-h1 mark{background:${CI.dunkel};color:#fff;padding:0 .14em;box-decoration-break:clone;-webkit-box-decoration-break:clone;display:inline-block;margin-top:.08em;text-shadow:none}
-.label{align-self:flex-start;background:${CI.brand};font-family:'Barlow Condensed';font-weight:900;font-size:${Math.round(s*1.15)}px;text-transform:uppercase;letter-spacing:.04em;padding:${Math.round(s*.18)}px ${Math.round(s*.55)}px;border-radius:10px;margin-bottom:${Math.round(s*.7)}px;transform:rotate(-2deg)}
-.sub{margin-top:${Math.round(s*.8)}px;font-weight:500;font-size:${s}px;line-height:1.36;color:#e6e5ea;max-width:96%}
-.sub b{font-weight:800;color:#fff}
-.zeile{margin-top:${Math.round(s*.8)}px;font-weight:800;font-size:${Math.round(s*1.2)}px;line-height:1.2}
-.chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:${Math.round(s*.7)}px}
-.chips span{font-weight:800;font-size:${Math.round(s*.82)}px;padding:9px 20px;border-radius:999px;border:2.5px solid rgba(255,255,255,.75)}
-.liste{list-style:none;margin-top:${Math.round(s*.9)}px;display:grid;gap:${Math.round(s*.55)}px}
-.liste li{display:flex;align-items:center;gap:18px;font-weight:700;font-size:${s + 1}px;line-height:1.25}
-.liste i{flex:0 0 auto;width:${s + 26}px;height:${s + 26}px;border-radius:50%;background:${CI.brand};display:grid;place-items:center}
-.liste i svg{width:${s - 2}px;height:${s - 2}px}
-.liste li:last-child span{color:${CI.akzent};font-weight:800}
-.cta{display:inline-flex;align-items:center;gap:16px;align-self:flex-start;margin-top:${Math.round(s*1.1)}px;
-  background:${CI.brand};color:#fff;font-weight:900;font-size:${Math.round(s*1.15)}px;padding:${Math.round(s*.72)}px ${Math.round(s*1.2)}px;border-radius:14px;
-  box-shadow:0 16px 44px rgba(${CI.brandRgb},.5)}
+/* Plakat-Optik: jede Zeile auf eigenem Farbblock */
+h1.bloecke{line-height:1.13;text-shadow:none;transform:rotate(-2deg);transform-origin:left bottom;margin-bottom:.06em}
+h1.bloecke span{padding:0 .13em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+h1.bloecke .b1{background:#fff;color:${CI.dunkel}}
+h1.bloecke .b2{background:${CI.brand};color:#fff}
+.sub{margin-top:${Math.round(s*.85)}px;font-weight:600;font-size:${s}px;line-height:1.35;color:#ecebef;max-width:97%}
+.proofs{display:flex;flex-wrap:wrap;gap:12px 26px;margin-top:${Math.round(s*.75)}px}
+.proofs span{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:${Math.round(s*.92)}px}
+.proofs svg{width:${s}px;height:${s}px;color:${CI.akzent}}
+.liste{list-style:none;margin-top:${Math.round(s*.9)}px;display:grid;gap:${Math.round(s*.5)}px}
+.liste li{display:flex;align-items:center;gap:18px;font-weight:800;font-size:${Math.round(s*1.12)}px;line-height:1.2}
+.liste i{flex:0 0 auto;width:${s + 22}px;height:${s + 22}px;border-radius:9px;background:#fff;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.liste i svg{width:${s}px;height:${s}px}
+.alle{margin-top:${Math.round(s*.9)}px;font-weight:800;font-size:${Math.round(s*1.05)}px;color:${CI.akzent}}
+.ctawrap{display:flex;align-items:center;gap:22px;margin-top:${Math.round(s*1.05)}px}
+.cta{display:inline-flex;align-items:center;gap:16px;background:${CI.brand};color:#fff;font-weight:900;font-size:${Math.round(s*1.15)}px;
+  padding:${Math.round(s*.72)}px ${Math.round(s*1.15)}px;border-radius:14px;box-shadow:0 16px 44px rgba(${CI.brandRgb},.5);white-space:nowrap}
 .cta svg{width:${s+2}px;height:${s+2}px}
-.cta--weiss{background:#fff;color:${CI.brand};box-shadow:0 16px 44px rgba(0,0,0,.3)}
-.fuss{margin-top:${Math.round(s*.75)}px;font-weight:700;font-size:${Math.round(s*.64)}px;letter-spacing:.07em;color:${motivName === 'block' ? 'rgba(255,255,255,.78)' : '#a9a7ae'}}
-.kante{position:absolute;left:0;right:0;bottom:0;height:12px;background:${motivName === 'block' ? CI.dunkel : CI.brand}}
+.ohne{font-weight:700;font-size:${Math.round(s*.72)}px;line-height:1.3;color:#c9c8ce}
+.kante{position:absolute;left:0;right:0;bottom:0;height:12px;background:${CI.brand}}
 </style></head><body>
-<div class="foto"></div>${panel}
+<div class="foto"></div>
 <div class="logo"><img src="${url(LOGO)}" alt=""></div>
 ${deko}
-<div class="frame"><div class="inner">
-  ${inhalt}
-  <div class="fuss">SCHUMANN &amp; HARDT · KIESWERK AM HASELSEE · BABENHAUSEN</div>
-</div></div>
+<div class="frame"><div class="inner">${inhalt}</div></div>
 <div class="kante"></div>
 <script>
-/* Erst nach dem Laden der Schrift messen – sonst rechnet die Schleife mit
-   der Ersatzschrift und verkleinert unnötig stark. */
+/* Erst nach dem Laden der Schrift messen, dann Headline so groß wie möglich. */
 document.fonts.ready.then(function(){
   var h=document.querySelector('h1'), f=document.querySelector('.frame'), inn=document.querySelector('.inner');
   var px=parseFloat(getComputedStyle(h).fontSize), n=0;
@@ -259,25 +228,23 @@ for (const st of STELLEN) {
       const page = await ctx.newPage();
       writeFileSync(TMP, seite(fmt, motivName, m));
       await page.goto('file://' + TMP, { waitUntil: 'load' });
-      await page.evaluate(() => document.fonts.ready);
       await page.waitForFunction(() => document.documentElement.dataset.ready === '1');
       const info = await page.evaluate(() => ({
         headpx: document.documentElement.dataset.headpx,
         bilderOk: [...document.images].every(i => i.complete && i.naturalWidth > 0),
-        /* Text darf weder ins Logo noch (bei 9:16) in die obere Safe Zone */
-        frameTop: Math.round(document.querySelector('.inner').getBoundingClientRect().top),
+        textTop: Math.round(document.querySelector('.inner').getBoundingClientRect().top),
         logoBottom: Math.round(document.querySelector('.logo').getBoundingClientRect().bottom)
       }));
       if (!info.bilderOk) throw new Error('Bild nicht geladen: ' + st.key + '/' + motivName);
-      if (info.frameTop < info.logoBottom) throw new Error(`${st.key}/${motivName}/${fmtName}: Text überlappt das Logo`);
+      if (info.textTop < info.logoBottom) throw new Error(`${st.key}/${motivName}/${fmtName}: Text überlappt das Logo`);
       const datei = `${st.key}-${motivName}-${fmtName}.png`;
       await page.screenshot({ path: join(OUT, datei) });
-      erzeugt.push(`${datei}  (Headline ${info.headpx}px, Text ab y=${info.frameTop})`);
+      erzeugt.push(`${datei}  (Headline ${info.headpx}px)`);
       await ctx.close();
     }
   }
 }
 await browser.close();
-if (!process.env.KEEP) rmSync(TMP, { force: true });
+rmSync(TMP, { force: true });
 console.log(`${erzeugt.length} Dateien gerendert nach creatives/v2/`);
 erzeugt.forEach(d => console.log('  ' + d));

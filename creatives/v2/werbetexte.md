@@ -1,16 +1,16 @@
 # Werbetexte Serie 2 – Meta Ads · Schumann & Hardt
 
-Ehrlich und laut: Rohstoffindustrie, viel draußen, im Winter auch mal nass
-und ungemütlich – dafür überdurchschnittlich bezahlt. Je Stelle drei
-Primärtexte mit unterschiedlichem Ansatz plus eine Überschrift und eine
-Beschreibung. Jeder Primärtext passt zu jedem Creative der jeweiligen
-Stelle – keine Bezüge auf Bildinhalte.
+Ehrlich und verlockend zugleich: Rohstoffindustrie, viel draußen, im
+Winter auch mal nass und ungemütlich – dafür überdurchschnittlich bezahlt.
+Je Stelle drei Primärtexte mit klar unterschiedlichem Ansatz, dazu eine
+Überschrift und eine Beschreibung. Jeder Primärtext passt zu jedem
+Creative der jeweiligen Stelle.
 
-| Primärtext | Ansatz |
-|------------|--------|
-| 1 | Warnung / Ehrlichkeit: „Nichts für Schönwetter-Typen“ |
-| 2 | Identität: „Kein Bürojob. Zum Glück.“ bzw. „Dein Arbeitsplatz schwimmt.“ |
-| 3 | Fairer Deal: „Mehr Geld, weil du mehr aushältst“ |
+| Primärtext | Ansatz | Erste Zeile (im Feed sichtbar) |
+|------------|--------|--------------------------------|
+| 1 | Szene aus dem Arbeitsalltag – man sieht sich selbst dort | „Früh am Morgen, Nebel über dem See …“ |
+| 2 | Kurz und direkt – alles Wichtige in 5 Zeilen | „Schlechtes Wetter. Gutes Geld.“ |
+| 3 | Bewusst aussortieren – wer weiterliest, fühlt sich gemeint | „Die meisten scrollen jetzt weiter. Gut so.“ |
 
 **Ziel-URLs:** `…/?stelle=mechatroniker` bzw. `…/?stelle=geraetefuehrer`
 
@@ -18,79 +18,69 @@ Stelle – keine Bezüge auf Bildinhalte.
 MECHATRONIKER (m/w/d)
 
 Primärtext 1:
-⚠️ Achtung: Dieser Job ist nichts für Schönwetter-Typen.
+Früh am Morgen, Nebel über dem See, kalte Finger. Du checkst die Förderbänder, bevor die Anlage anläuft.
 
-Als Mechatroniker (m/w/d) bei Schumann & Hardt arbeitest du in der Rohstoffindustrie – im Kieswerk am Haselsee in Babenhausen. Du bist viel draußen, und im Winter ist es auch mal nass, kalt und ungemütlich. Das sagen wir dir lieber gleich.
+Das ist dein Arbeitstag als Mechatroniker (m/w/d) im Kieswerk am Haselsee in Babenhausen. Rohstoffindustrie. Viel draußen. Im Winter auch mal nass und ungemütlich.
 
-Dafür bekommst du:
-✅ Überdurchschnittliche Bezahlung – weil der Job es verdient
-✅ Einen sicheren Arbeitsplatz mit Zukunft: Sand und Kies werden immer gebraucht
-✅ Richtig große Technik: Radlader, Schwimmgreifer, moderne Aufbereitungsanlagen
+Genau deshalb zahlen wir überdurchschnittlich gut – und bieten dir einen sicheren Job mit Zukunft.
 
-Du hast eine Ausbildung als Mechatroniker oder Schlosser und packst lieber an, als im Warmen zu sitzen? Dann bewirb dich jetzt – in 60 Sekunden, ohne Lebenslauf. 👇
+Ausbildung als Mechatroniker oder Schlosser? Bewirb dich in 60 Sekunden, ohne Lebenslauf. 👇
 
 Primärtext 2:
-Kein Bürojob. Zum Glück. 💪
+Schlechtes Wetter. Gutes Geld. 💶
 
-Du bist Mechatroniker oder Schlosser und willst nicht in einer sterilen Halle stehen, sondern da, wo richtig was bewegt wird? Bei uns hältst du ein ganzes Kieswerk am Laufen: Radlader, Schwimmgreifer und Aufbereitungsanlagen warten, instandsetzen und optimieren – bevor etwas stillsteht.
+Mechatroniker (m/w/d) fürs Kieswerk in Babenhausen:
+→ Radlader, Schwimmgreifer und Aufbereitungsanlage warten und instandsetzen
+→ Viel draußen – auch wenn's regnet oder friert
+→ Überdurchschnittliche Bezahlung
+→ Sicherer Job: Sand und Kies werden immer gebraucht
 
-Ehrlich gesagt: Du bist viel draußen, auch wenn's regnet oder friert. Genau deshalb zahlen wir überdurchschnittlich gut.
-
-📍 Kieswerk am Haselsee, Babenhausen-Harreshausen · Vollzeit
-👉 Jetzt in 60 Sekunden bewerben – ganz ohne Anschreiben und Lebenslauf.
+60 Sekunden, kein Lebenslauf. Jetzt bewerben 👇
 
 Primärtext 3:
-Mehr Geld, weil du mehr aushältst? Klingt fair. 💶
+Die meisten scrollen jetzt weiter. Gut so.
 
-Sand und Kies sind die Grundlage für jeden Bau – gewonnen werden sie draußen, bei Wind und Wetter. Deshalb verdienst du bei Schumann & Hardt als Mechatroniker (m/w/d) überdurchschnittlich gut und hast einen Arbeitsplatz, der sicher ist und Zukunft hat.
+Dieser Job ist nichts für jeden. Als Mechatroniker (m/w/d) im Kieswerk am Haselsee arbeitest du in der Rohstoffindustrie – viel draußen, im Winter auch bei Nässe und Kälte.
 
-Was dich erwartet:
-🔧 Wartung und Instandsetzung an Radlader, Schwimmgreifer und Aufbereitungsanlage
-🌧️ Viel draußen – im Winter auch mal nass und ungemütlich
-🏗️ Rohstoffindustrie statt Büro, Vollzeit in Babenhausen
+Wer das abkann, bekommt dafür eine überdurchschnittliche Bezahlung und einen Arbeitsplatz mit Zukunft.
 
-Ausbildung als Mechatroniker oder Schlosser? Dann fehlen nur noch 60 Sekunden bis zu deiner Bewerbung.
+Du liest immer noch? Dann bist du vielleicht genau richtig. Die Bewerbung dauert 60 Sekunden. 👇
 
-Überschrift: Mechatroniker (m/w/d) – überdurchschnittlich bezahlt
-Beschreibung: Kieswerk Babenhausen · Bewerbung in 60 Sek.
+Überschrift: Schlechtes Wetter. Gutes Geld.
+Beschreibung: Mechatroniker (m/w/d) · Babenhausen
 
 
 GERÄTEFÜHRER (m/w/d)
 
 Primärtext 1:
-⚠️ Achtung: Dieser Job ist nichts für Schönwetter-Typen.
+Früh am Morgen, Nebel über dem See. Du steigst in die Kabine des Schwimmgreifers – und holst den ersten Kies des Tages aus dem Wasser.
 
-Als Geräteführer (m/w/d) bei Schumann & Hardt sitzt du nicht im Büro, sondern steuerst Radlader und Schwimmgreifer – mitten in der Rohstoffindustrie, im Kieswerk am Haselsee in Babenhausen. Du bist viel draußen, und im Winter ist es auch mal nass, kalt und ungemütlich. Das sagen wir dir lieber gleich.
+Das ist dein Arbeitstag als Geräteführer (m/w/d) im Kieswerk am Haselsee in Babenhausen. Rohstoffindustrie. Viel draußen. Im Winter auch mal nass und ungemütlich.
 
-Dafür bekommst du:
-✅ Überdurchschnittliche Bezahlung – weil der Job es verdient
-✅ Einen sicheren Arbeitsplatz mit Zukunft: Sand und Kies werden immer gebraucht
-✅ Große Maschinen statt Schreibtisch: Radlader, Schwimmgreifer, Aufbereitungsanlage
+Genau deshalb zahlen wir überdurchschnittlich gut – und bieten dir einen sicheren Job mit Zukunft.
 
-Du bedienst Großgeräte sicher und kennst dich mit Baustoffen aus? Dann bewirb dich jetzt – in 60 Sekunden, ohne Lebenslauf. 👇
+Du bedienst Großgeräte sicher? Bewirb dich in 60 Sekunden, ohne Lebenslauf. 👇
 
 Primärtext 2:
-Dein Arbeitsplatz schwimmt. 🌊
+Schlechtes Wetter. Gutes Geld. 💶
 
-Als Geräteführer (m/w/d) holst du mit dem Schwimmgreifer Sand und Kies aus dem See, fährst Radlader, bedienst die Aufbereitungsanlage und sorgst dafür, dass jede Ladung sauber verwogen und verladen wird.
+Geräteführer (m/w/d) fürs Kieswerk in Babenhausen:
+→ Radlader, Schwimmgreifer und Aufbereitungsanlage bedienen
+→ Verladen, verwiegen, Versand vorbereiten
+→ Viel draußen – auch wenn's regnet oder friert
+→ Überdurchschnittliche Bezahlung, sicherer Job
 
-Ehrlich gesagt: Das ist Rohstoffindustrie. Viel draußen, auch bei Regen und Frost. Genau deshalb zahlen wir überdurchschnittlich gut.
-
-📍 Kieswerk am Haselsee, Babenhausen-Harreshausen · Vollzeit
-👉 Jetzt in 60 Sekunden bewerben – ganz ohne Anschreiben und Lebenslauf.
+60 Sekunden, kein Lebenslauf. Jetzt bewerben 👇
 
 Primärtext 3:
-Mehr Geld, weil du mehr aushältst? Klingt fair. 💶
+Die meisten scrollen jetzt weiter. Gut so.
 
-Sand und Kies sind die Grundlage für jeden Bau – gewonnen werden sie draußen, bei Wind und Wetter. Deshalb verdienst du bei Schumann & Hardt als Geräteführer (m/w/d) überdurchschnittlich gut und hast einen Arbeitsplatz, der sicher ist und Zukunft hat.
+Dieser Job ist nichts für jeden. Als Geräteführer (m/w/d) im Kieswerk am Haselsee steuerst du Radlader und Schwimmgreifer – in der Rohstoffindustrie, viel draußen, im Winter auch bei Nässe und Kälte.
 
-Was dich erwartet:
-🚜 Radlader, Schwimmgreifer und Aufbereitungsanlage bedienen und überwachen
-🌧️ Viel draußen – im Winter auch mal nass und ungemütlich
-⚖️ Verladung, Verwiegung und Versand – du hast den Überblick
+Wer das abkann, bekommt dafür eine überdurchschnittliche Bezahlung und einen Arbeitsplatz mit Zukunft.
 
-Du bedienst Großgeräte sicher? Dann fehlen nur noch 60 Sekunden bis zu deiner Bewerbung.
+Du liest immer noch? Dann bist du vielleicht genau richtig. Die Bewerbung dauert 60 Sekunden. 👇
 
-Überschrift: Geräteführer (m/w/d) – überdurchschnittlich bezahlt
-Beschreibung: Kieswerk Babenhausen · Bewerbung in 60 Sek.
+Überschrift: Schlechtes Wetter. Gutes Geld.
+Beschreibung: Geräteführer (m/w/d) · Babenhausen
 ```
