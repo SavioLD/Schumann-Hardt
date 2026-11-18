@@ -321,7 +321,7 @@ bewerben – ohne Anschreiben, ohne Lebenslauf“).
 node creatives/build-v2.mjs
 ```
 
-**12 Creatives** – 2 Stellen × 3 Motive × 4:5 / 9:16:
+**24 Dateien** – 2 Stellen × 3 Motive × 4 Formate:
 
 | Motiv | Aussage | Foto Mechatroniker | Foto Geräteführer |
 |-------|---------|--------------------|-------------------|
@@ -329,7 +329,21 @@ node creatives/build-v2.mjs
 | `fell` | „<Stelle> mit dickem Fell gesucht.“ + Absperrband „Nichts für Schönwetter-Typen“ + Sticker „Überdurchschnittlich bezahlt“ | Schwimmbänder | Schwimmgreifer |
 | `check` | „Passt das zu dir?“ – Checkliste zum Selbst-Abhaken (Qualifikation, wetterfest, lieber Kieswerk als Büro, mehr verdienen) | Schwimmgreifer | Aufbereitung |
 
-Dateinamen: `creatives/v2/<stelle>-<motiv>-<format>.png`. Headlines in
+| Format | Größe | Meta-Platzierungen |
+|--------|-------|--------------------|
+| `story-9x16` | 1080 × 1920 | Stories + Reels (Facebook, Instagram, Messenger) – oben 250 px / unten 340 px frei |
+| `feed-4x5` | 1080 × 1350 | Feed Instagram + Facebook (Insta-Post) |
+| `feed-1x1` | 1080 × 1080 | Rechte Spalte, Marketplace, Suche, Feed-Alternative |
+| `quer-1200x628` | 1200 × 628 (1,91:1) | Querformat: Link-Anzeigen, rechte Spalte, In-Article, Audience Network – eigenes Layout, Text links, Foto rechts |
+
+In Meta je Anzeige die Platzierungs-Anpassung nutzen: Story-Datei für
+Stories/Reels, 4:5 für die Feeds, 1:1 bzw. 1,91:1 für die übrigen
+Platzierungen.
+
+Der Generator prüft bei jeder Datei, dass der Text weder Logo noch
+Sticker noch Absperrband berührt.
+
+Dateinamen: `creatives/v2/<stelle>-<motiv>-<format>.png`, z. B. `creatives/v2/mechatroniker-wetter-story-9x16.png`. Headlines in
 **Barlow Condensed** (gleiche Schriftfamilie wie die Seite, liegt in
 `creatives/fonts/`). Safe Zones bei 9:16 wie gehabt.
 
