@@ -384,6 +384,10 @@ Safe Zones.
 **Werbetexte:** `creatives/jobbahn/werbetexte.md` – Absender Jobbahn, je
 Stelle drei Primärtexte, eine Überschrift, eine Beschreibung.
 
+**Meta-Sofortformular:** `creatives/jobbahn/meta-formular.md` – je Stelle
+ein Formular zum Reinkopieren, nur K.-o.-Fragen mit Ja/Nein, Datenschutz-
+Kurzfassung, Abschluss und Hinweis zur K.-o.-Filterung über Make.com.
+
 > Offen: Wohin verlinken die Jobbahn-Anzeigen? Die Karriereseite in diesem
 > Repo ist im Design von Schumann & Hardt – für eine durchgängige
 > Jobbahn-Strecke bräuchte es eine Jobbahn-Zielseite.
