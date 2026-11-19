@@ -354,3 +354,36 @@ eine Überschrift, eine Beschreibung.
 > Hinweis: Die Karriereseite nennt die überdurchschnittliche Bezahlung und
 > die Arbeit bei Wind und Wetter bisher nicht. Für eine durchgängige
 > Botschaft von der Anzeige bis zur Bewerbung sollte sie das ebenfalls tun.
+
+## Creatives über Jobbahn – `creatives/jobbahn/`
+
+Die Anzeigen laufen über **Jobbahn** statt über den Arbeitgeber: kein
+Firmenname, kein Firmenlogo, die Stelle heißt „Kieswerk in Babenhausen“.
+Botschaft wie Serie 2, Design komplett aus dem Jobbahn-Repo
+(`SavioLD/jobbahn`, `config/marke.json`):
+
+- Nachtblau `#0F1B2D`, Blau `#2B59C3`, Hellblau `#7FA2F0`, Schrift
+  Plus Jakarta Sans (liegt in `creatives/jobbahn/assets/`)
+- Jobbahn-Logo weiß, unverändert aus dem Jobbahn-Repo
+- Umlaufbahnen als Markenmotiv, „Neuer Treffer“-Karte und weiße Info-Karte
+  wie auf jobbahn.com, Vertrauenspunkte „Kostenlos · Ohne Lebenslauf · Wir
+  rufen dich an“
+
+```bash
+node creatives/build-jobbahn.mjs
+```
+
+**24 Dateien** – 2 Stellen × 3 Motive (`wetter`, `fell`, `check`) ×
+4 Formate (`story-9x16`, `feed-4x5`, `feed-1x1`, `quer-1200x628`),
+z. B. `creatives/jobbahn/mechatroniker-wetter-story-9x16.png`.
+Im Story-Format steht der Text oben, das Foto füllt unten das Format (Text
+und Karten außerhalb der Safe Zones). Im 1:1 entfällt beim Motiv `fell`
+das Absperrband. Der Generator prüft jede Datei auf Überlappungen und
+Safe Zones.
+
+**Werbetexte:** `creatives/jobbahn/werbetexte.md` – Absender Jobbahn, je
+Stelle drei Primärtexte, eine Überschrift, eine Beschreibung.
+
+> Offen: Wohin verlinken die Jobbahn-Anzeigen? Die Karriereseite in diesem
+> Repo ist im Design von Schumann & Hardt – für eine durchgängige
+> Jobbahn-Strecke bräuchte es eine Jobbahn-Zielseite.
